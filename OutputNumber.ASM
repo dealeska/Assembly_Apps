@@ -1,13 +1,12 @@
         org     100h
 
-start:
+Start:
 
         mov     ax, 2021
         mov     ax, 3745o
         mov     ax, 0111'1110'0101b
         mov     ax, 0x7E5
         mov     ax, $7E5
-        mov     ax, -5
 
         call    Output
 
@@ -28,12 +27,12 @@ Output:
 
         xor     di, di
         test    eax, eax
-        jne     .Devide
+        jne     .Divide
         push    $30
         inc     di
         jmp     .Print
 
-.Devide:
+.Divide:
         mov     bx, 10
         mov     cx, 10
 

@@ -1,7 +1,7 @@
         org 100h
 
 Start:
-        call    PrintMas
+        call    PrintArr
 
         push    0
         push    n - 1
@@ -117,7 +117,7 @@ QuickSort:
         ret     4
 
 ;=================================================
-PrintMas:
+PrintArr:
         push    bp
         mov     bp, sp
 
@@ -144,12 +144,12 @@ Output:
 
         xor     di, di
         test    eax, eax
-        jne     .Devide
+        jne     .Divide
         push    $30
         inc     di
         jmp     .Print
 
-.Devide:
+.Divide:
         mov     bx, 10
         mov     cx, 10
 
